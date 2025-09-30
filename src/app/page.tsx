@@ -1,103 +1,380 @@
+
+
+
+// "use client";
+
+// import Image from "next/image";
+// import Link from "next/link";
+// import logo from "../../public/assets/logo.png";
+// import img from "../../public/assets/img5.jpg";
+// import app_store from "../../public/assets/app_store_icon.svg";
+// import play_store from "../../public/assets/website_play_store.png";
+
+// export default function Home() {
+//   return (
+//     <main className="relative min-h-screen flex items-end md:items-center justify-center bg-gray-900 overflow-hidden">
+//       {/* 🌄 Background Image */}
+//       <div className="absolute inset-0 z-0">
+//         <Image
+//           src={img}
+//           alt="Background"
+//           fill
+//           style={{ objectFit: "cover" }}
+//           className="pointer-events-none select-none"
+//           priority
+//         />
+//       </div>
+
+//       {/* 🧊 Foreground Card */}
+//       <div className="relative z-10 max-w-6xl w-full bg-black/60 backdrop-blur-md rounded-3xl shadow-2xl p-6 md:p-12 flex flex-col md:flex-row items-center gap-10">
+//         {/* 📄 Left Content */}
+//         <div className="flex-1 text-center md:text-left">
+//           <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-100 leading-tight mb-6">
+//             Plan your next adventure with{" "}
+//             <span className="text-blue-600">EightyDays</span>
+//           </h1>
+//           <p className="text-lg text-gray-100 mb-8">
+//             Discover new places, plan smarter itineraries, and make every trip
+//             unforgettable.
+//           </p>
+
+//           {/* 🔘 CTA Buttons */}
+//           <div className="flex flex-col sm:flex-row sm:items-center gap-4 justify-center md:justify-start mb-6">
+//             <Link href="/signup">
+//               <button className="bg-white px-6 py-3 rounded-2xl text-black shadow hover:bg-gray-100 transition">
+//                 New here? Get Started
+//               </button>
+//             </Link>
+
+//               <button className="text-white font-medium">
+//                 Already a member? 
+//             <Link className="hover:underline" href="/signin">
+//                  Login now
+//             </Link>
+//               </button>
+//           </div>
+
+//           {/* 📱 App Store / Play Store Buttons */}
+//           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+//             {/* ✅ App Store button (correct icon + Apple link) */}
+//             <Link
+//               href="https://apps.apple.com/in/app/eighty-days-travel-planner/id6474486950"
+//               target="_blank"
+//               rel="noopener noreferrer"
+//               className="inline-flex items-center gap-2 px-10 py-3 rounded-2xl bg-gray-200 text-black 
+//                 border-t-2 border-l-2 border-r-4 border-b-4 border-black 
+//                 hover:border-r-6 hover:border-b-6 
+//                 hover:translate-x-0.5 hover:translate-y-0.5 
+//                 hover:opacity-90 transition-all duration-200 ease-in-out"
+//             >
+//               <Image
+//                 src={app_store}
+//                 width={20}
+//                 style={{ height: "auto" }}
+//                 alt="App Store icon"
+//                 className="object-contain"
+//                 priority
+//               />
+//                App Store
+//             </Link>
+
+//             {/* ✅ Play Store button (correct icon + Play link) */}
+//             <Link
+//               href="https://play.google.com/store/apps/details?id=com.phatventures.eightydays"
+//               target="_blank"
+//               rel="noopener noreferrer"
+//               className="inline-flex items-center gap-2 px-10 py-3 rounded-2xl bg-gray-200 text-black 
+//                 border-t-2 border-l-2 border-r-4 border-b-4 border-black 
+//                 hover:border-r-6 hover:border-b-6 
+//                 hover:translate-x-0.5 hover:translate-y-0.5 
+//                 hover:opacity-90 transition-all duration-200 ease-in-out"
+//             >
+//               <Image
+//                 src={play_store}
+//                 width={20}
+//                 height={20}
+//                 alt="Play Store icon"
+//                 className="object-contain"
+//                 priority
+//               />
+//                Play Store
+//             </Link>
+//           </div>
+//         </div>
+
+//         {/* 🖼️ Right Content (Logo) */}
+//         <div className="flex-1 md:flex justify-center hidden">
+//           <Image
+//             src={logo}
+//             alt="EightyDays Logo"
+//             width={350}
+//             height={350}
+//             className="object-contain"
+//             priority
+//           />
+//         </div>
+//       </div>
+//     </main>
+//   );
+// }
+
+
+
+
+
+
+
+// "use client";
+
+// import Image from "next/image";
+// import Link from "next/link";
+// import logo from "../../public/assets/logo.png";
+// import img from "../../public/assets/img5.jpg";
+// import app_store from "../../public/assets/app_store_icon.svg";
+// import play_store from "../../public/assets/website_play_store.png";
+
+// export default function Home() {
+//   return (
+//     <main className="relative min-h-screen flex items-end md:items-center justify-center bg-gray-900 overflow-hidden">
+//       {/* 🌄 Background Image */}
+//       <div className="absolute inset-0 z-0">
+//         <Image
+//           src={img}
+//           alt="Background"
+//           fill
+//           style={{ objectFit: "cover" }}
+//           className="pointer-events-none select-none"
+//           priority
+//         />
+//       </div>
+
+//       {/* 🧊 Foreground Card */}
+//       <div className="relative z-10 max-w-6xl w-full rounded-3xl  p-6 md:p-12 flex flex-col md:flex-row items-center gap-10">
+//         {/* icon at top  */}
+//         <div className=" flex items-start">
+//          <Image
+//             src={logo}
+//             alt="EightyDays Logo"
+//             width={50}
+//             height={50}
+//             className="object-contain"
+//             priority
+//             />
+//             </div>
+//         {/* 📄 Left Content */}
+//         <div className="flex-1 text-center md:text-left">
+//           <h1 className="text-4xl sm:text-5xl font-extrabold text-black leading-tight mb-6">
+//             Plan your next adventure with{" "}
+//             <span className="text-blue-600">EightyDays</span>
+//           </h1>
+//           <p className="text-lg text-black mb-8">
+//             Discover new places, plan smarter itineraries, and make every trip
+//             unforgettable.
+//           </p>
+
+//           {/* 🔘 CTA Buttons */}
+//           <div className="flex flex-col sm:flex-row sm:items-center gap-4 justify-center md:justify-start mb-6">
+//             <Link href="/signup">
+//               <button className="bg-white px-6 py-3 rounded-2xl text-black shadow hover:bg-gray-100 transition">
+//                 New here? Get Started
+//               </button>
+//             </Link>
+
+//               <button className="text-white font-medium">
+//                 Already a member? 
+//             <Link className="hover:underline" href="/signin">
+//                  Login now
+//             </Link>
+//               </button>
+//           </div>
+
+//           {/* 📱 App Store / Play Store Buttons */}
+//           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+//             {/* ✅ App Store button (correct icon + Apple link) */}
+//             <Link
+//               href="https://apps.apple.com/in/app/eighty-days-travel-planner/id6474486950"
+//               target="_blank"
+//               rel="noopener noreferrer"
+//               className="inline-flex items-center gap-2 px-10 py-3 rounded-2xl bg-gray-200 text-black 
+//                 border-t-2 border-l-2 border-r-4 border-b-4 border-black 
+//                 hover:border-r-6 hover:border-b-6 
+//                 hover:translate-x-0.5 hover:translate-y-0.5 
+//                 hover:opacity-90 transition-all duration-200 ease-in-out"
+//             >
+//               <Image
+//                 src={app_store}
+//                 width={20}
+//                 style={{ height: "auto" }}
+//                 alt="App Store icon"
+//                 className="object-contain"
+//                 priority
+//               />
+//                App Store
+//             </Link>
+
+//             {/* ✅ Play Store button (correct icon + Play link) */}
+//             <Link
+//               href="https://play.google.com/store/apps/details?id=com.phatventures.eightydays"
+//               target="_blank"
+//               rel="noopener noreferrer"
+//               className="inline-flex items-center gap-2 px-10 py-3 rounded-2xl bg-gray-200 text-black 
+//                 border-t-2 border-l-2 border-r-4 border-b-4 border-black 
+//                 hover:border-r-6 hover:border-b-6 
+//                 hover:translate-x-0.5 hover:translate-y-0.5 
+//                 hover:opacity-90 transition-all duration-200 ease-in-out"
+//             >
+//               <Image
+//                 src={play_store}
+//                 width={20}
+//                 height={20}
+//                 alt="Play Store icon"
+//                 className="object-contain"
+//                 priority
+//               />
+//                Play Store
+//             </Link>
+//           </div>
+//         </div>
+
+//       </div>
+//     </main>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import logo from "../../public/assets/logo.png";
+import img from "../../public/assets/img5.jpg";
+import app_store from "../../public/assets/app_store_icon.svg";
+import play_store from "../../public/assets/website_play_store.png";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <main className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden">
+      {/* 🌄 Background Image */}
+      <div className="  absolute inset-0 z-0">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
+          src={img}
+          alt="Background"
+          fill
+          className="object-cover object-top sm:object-center pointer-events-none select-none"
           priority
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* ✅ Logo fixed at top-left */}
+      <div className="absolute top-6 left-6 z-20 ">
+        <Image
+          src={logo}
+          alt="EightyDays Logo"
+          width={60}
+          height={60}
+          className="object-contain"
+          priority
+        />
+      </div>
+
+      {/* 🧊 Foreground Card */}
+      <div className="relative z-10 max-w-6xl w-full rounded-3xl  p-6 md:p-12 flex flex-col md:flex-row items-center gap-10 ">
+        {/* 📄 Left Content */}
+        <div className="flex-1 text-center md:text-left ">
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-black leading-tight mb-6 mt-4">
+            Plan your next adventure with{" "}
+            <span className="text-blue-600">EightyDays</span>
+          </h1>
+          <p className="text-lg text-black mb-8">
+            Discover new places, plan smarter itineraries, and make every trip unforgettable.
+          </p>
+
+          {/* 🔘 CTA Buttons */}
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4 justify-center md:justify-start mb-6">
+            <Link href="/signup">
+              <button className="bg-white px-6 py-3 rounded-2xl border-2 border-black text-black shadow hover:bg-gray-100 transition">
+                New here?
+                 <strong className="hover:underline">
+                  Get Started
+                  </strong> 
+              </button>
+            </Link>
+
+            <button className="text-black font-medium ">
+              Already a member?
+              <Link className="hover:underline ml-1 " href="/signin">
+               <strong>
+                 Login now
+                </strong>
+              </Link>
+            </button>
+          </div>
+
+          {/* 📱 App Store / Play Store Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            {/* App Store */}
+            <Link
+              href="https://apps.apple.com/in/app/eighty-days-travel-planner/id6474486950"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-10 py-3 rounded-2xl bg-gray-200 text-black 
+                border-t-2 border-l-2 border-r-4 border-b-4 border-black 
+                hover:border-r-6 hover:border-b-6 
+                hover:translate-x-0.5 hover:translate-y-0.5 
+                hover:opacity-90 transition-all duration-200 ease-in-out"
+            >
+              <Image
+                src={app_store}
+                width={20}
+                style={{ height: "auto" }}
+                alt="App Store icon"
+                className="object-contain"
+              />
+              App Store
+            </Link>
+
+            {/* Play Store */}
+            <Link
+              href="https://play.google.com/store/apps/details?id=com.phatventures.eightydays"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-10 py-3 rounded-2xl bg-gray-200 text-black 
+                border-t-2 border-l-2 border-r-4 border-b-4 border-black 
+                hover:border-r-6 hover:border-b-6 
+                hover:translate-x-0.5 hover:translate-y-0.5 
+                hover:opacity-90 transition-all duration-200 ease-in-out"
+            >
+              <Image
+                src={play_store}
+                width={20}
+                height={20}
+                alt="Play Store icon"
+                className="object-contain"
+              />
+              Play Store
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        
+
+      </div>
+    </main>
   );
 }
