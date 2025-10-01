@@ -1,8 +1,8 @@
 
 "use client"
 
-import AutoLogout from '@/components/AutoLogout'
-import Navbar from '@/components/Navbar'
+import AutoLogout from '@/components/Common/AutoLogout'
+import Navbar from '@/components/Layout/Navbar'
 import { SessionProvider } from 'next-auth/react'
 import { ReactNode } from 'react'
 

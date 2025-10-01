@@ -1,29 +1,42 @@
-
-
 "use client";
 
 import { useParams } from "next/navigation";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import data from "../../../../../ListData.json";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import Loader from "@/components/Common/Loader";
 
-const MapComponent = dynamic(() => import("@/components/MapComponent"), {
+const MapComponent = dynamic(() => import("@/components/Map/MapComponent"), {
   ssr: false,
 });
 
 function ListViewBodyPage() {
-const params = useParams() as { params: string[] }; 
-         const place_id = params.params
+  const params = useParams() as { params: string[] };
+  const place_id = params.params;
   const destinations = data.data.places;
 
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, []);
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <Loader size="lg" />
+      </div>
+    );
+  }
 
   // Find the destination by place_id
-const destination = destinations.find(
-  (dest) => String(dest.place_id).trim() === String(place_id).trim()
-);
-
-
+  const destination = destinations.find(
+    (dest) => String(dest.place_id).trim() === String(place_id).trim()
+  );
 
   if (!destination) {
     return (
@@ -42,7 +55,7 @@ const destination = destinations.find(
     open_hours_text,
     coordinates,
   } = destination;
-const imgs = cover_media.large
+  const imgs = cover_media.large;
   return (
     <div className="max-w-4xl mt-16 mx-auto p-6 text-black space-y-6">
       {/* Image */}
@@ -63,17 +76,26 @@ const imgs = cover_media.large
 
       {/* Info */}
       <div className="grid grid-cols-2 gap-4 text-sm text-gray-600">
-        <p><strong>Rating:</strong> {rating}</p>
-        <p><strong>Reviews:</strong> {review_count}</p>
-        <p><strong>Open Hours:</strong> {open_hours_text}</p>
-        <p><strong>Latitude:</strong> {coordinates.latitude}</p>
-        <p><strong>Longitude:</strong> {coordinates.longitude}</p>
+        <p>
+          <strong>Rating:</strong> {rating}
+        </p>
+        <p>
+          <strong>Reviews:</strong> {review_count}
+        </p>
+        <p>
+          <strong>Open Hours:</strong> {open_hours_text}
+        </p>
+        <p>
+          <strong>Latitude:</strong> {coordinates.latitude}
+        </p>
+        <p>
+          <strong>Longitude:</strong> {coordinates.longitude}
+        </p>
       </div>
 
       {/* Map */}
       <div className="mt-6">
         <MapComponent destination={{ name, coordinates, imgs }} />
-
       </div>
     </div>
   );

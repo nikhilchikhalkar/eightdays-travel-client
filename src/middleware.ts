@@ -4,7 +4,7 @@ import { getToken } from 'next-auth/jwt';
 
 // Define access rules
 const publicRoutes = ['/', '/signin', '/signup', '/forgot-password'];
-const protectedRoutes = ['/home', '/home/*']; // support /home and all its subroutes
+const protectedRoutes = ['/home', '/home/*']; 
 
 export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
@@ -30,7 +30,7 @@ export async function middleware(req: NextRequest) {
   // Get session
   const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET });
 
-  // 🛑 Not logged in
+  // Not logged in
   if (!token) {
     if (isPublic) {
       return NextResponse.next();
@@ -41,7 +41,7 @@ export async function middleware(req: NextRequest) {
     }
   }
 
-  // ✅ Logged in
+  //  Logged in
   if (token) {
     if (isProtected) {
       return NextResponse.next();

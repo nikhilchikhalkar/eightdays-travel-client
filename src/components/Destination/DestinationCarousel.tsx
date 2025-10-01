@@ -1,4 +1,4 @@
-"use client"; // Only needed if using App Router
+"use client"; 
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";

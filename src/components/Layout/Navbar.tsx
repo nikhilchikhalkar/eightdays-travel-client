@@ -5,8 +5,9 @@
 import { useState } from "react";
 import Image from "next/image";
 import { useSession, signOut } from "next-auth/react";
-import logo from "../../public/assets/logo.png";
-import Loader from "./Loader";
+import logo from "../../../public/assets/logo.png";
+import Loader from "../Common/Loader";
+import Link from "next/link";
 
 const Navbar = () => {
   const [showModal, setShowModal] = useState(false);
@@ -30,10 +31,10 @@ const Navbar = () => {
     <>
       <nav className="fixed top-0 left-0 right-0 flex justify-between items-center px-6 py-4 bg-white shadow-md z-50">
         {/* Logo + App Name */}
-        <div className="flex items-center space-x-2">
+        <Link href='/' className="flex items-center space-x-2">
           <Image src={logo} alt="Logo" width={40} height={40} />
           <span className="text-xl font-semibold text-black hidden md:block">EightDays TravelApp</span>
-        </div>
+        </Link>
 
         {/* Right Section: User Info + Sign Out */}
         <div className="flex items-center space-x-4">

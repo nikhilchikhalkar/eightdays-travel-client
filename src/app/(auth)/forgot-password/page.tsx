@@ -8,9 +8,9 @@ export const metadata: Metadata = {
 }
 function ForgotPassWord() {
   return (
-    <div>
+    <>
       <ForgotPasswordBody/>
-    </div>
+    </>
   )
 }
 

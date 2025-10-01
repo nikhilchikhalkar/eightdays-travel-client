@@ -1,9 +1,8 @@
-// components/Loader.tsx
 import React from 'react';
 
 interface LoaderProps {
   size?: 'sm' | 'md' | 'lg';
-  color?: string; // Tailwind color class
+  color?: string; 
 }
 
 const Loader: React.FC<LoaderProps> = ({

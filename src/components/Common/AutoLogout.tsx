@@ -46,8 +46,8 @@ export default function AutoLogout() {
       signOut();
     }, msLeft);
 
-    return () => clearTimeout(timer); // Clean up the timer
-  }, [session?.apiToken]); // Only run effect if token changes
+    return () => clearTimeout(timer); 
+  }, [session?.apiToken]); 
 
   return null;
 }

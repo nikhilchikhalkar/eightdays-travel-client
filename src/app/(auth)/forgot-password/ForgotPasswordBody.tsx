@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Image from 'next/image';
-import { useForm } from 'react-hook-form';
-import InputField from '@/components/InputField';
-import bg from '../../../../public/assets/img5.jpg';
-import logo from '../../../../public/assets/logo.png';
-import Link from 'next/link';
+import React from "react";
+import Image from "next/image";
+import { useForm } from "react-hook-form";
+import bg from "../../../../public/assets/img5.jpg";
+import logo from "../../../../public/assets/logo.png";
+import Link from "next/link";
+import InputField from "@/components/Common/InputField";
 
 interface SigninFormData {
   usernameOrEmail: string;
@@ -20,7 +20,7 @@ const ForgotPasswordBody: React.FC = () => {
   } = useForm<SigninFormData>();
 
   const onSubmit = (data: SigninFormData) => {
-    console.log('Signin Data:', data);
+    console.log("Signin Data:", data);
   };
 
   return (
@@ -47,7 +47,9 @@ const ForgotPasswordBody: React.FC = () => {
             height={60}
             className="mx-auto mb-2 object-contain"
           />
-          <h1 className="text-2xl font-bold text-gray-800">Welcome to Eighty Days</h1>
+          <h1 className="text-2xl font-bold text-gray-800">
+            Welcome to Eighty Days
+          </h1>
           <p className="text-gray-500 text-sm">Sign in to your account</p>
         </div>
 
@@ -58,9 +60,8 @@ const ForgotPasswordBody: React.FC = () => {
             name="usernameOrEmail"
             register={register}
             error={errors.usernameOrEmail?.message}
-            rules={{ required: 'Username or Email is required' }}
+            rules={{ required: "Username or Email is required" }}
           />
-
 
           <button
             type="submit"
@@ -70,8 +71,11 @@ const ForgotPasswordBody: React.FC = () => {
           </button>
 
           <p className="text-center text-sm mt-4 text-gray-600">
-           want to continue{' '}
-            <Link href="/signin" className="text-black font-semibold hover:underline">
+            want to continue{" "}
+            <Link
+              href="/signin"
+              className="text-black font-semibold hover:underline"
+            >
               Login
             </Link>
           </p>

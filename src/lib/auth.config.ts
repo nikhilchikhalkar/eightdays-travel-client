@@ -1,6 +1,4 @@
 
-
-
 import CredentialsProvider from "next-auth/providers/credentials";
 import { NextAuthOptions } from "next-auth";
 
@@ -39,7 +37,7 @@ interface LoginResponse {
     lastName: string;
     username: string;
     email: string;
-    id?: string; // <-- Optional, if your API supports it
+    id?: string; 
   };
   code: number;
 }
